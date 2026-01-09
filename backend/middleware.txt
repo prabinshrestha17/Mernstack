@@ -1,0 +1,19 @@
+Middleware => frontend -> request pathaucha server ma 
+              // Middleware => function () => backend pathauney
+              next();
+              backend -> response pathaucha
+
+
+RBAC => Role Based Access Control 
+
+Vehicle Booking System 
+
+user - vehicle - mustang - send - admin panel
+admin - admin => driver inform ,
+driver - login admin => booking accept garcha
+
+user => Login garera vehicle booking = ram
+admin => admin create garna paucha, booking herna paaucha driver lai inform garaucha, stats herna paucha = shyam
+driver => booking lai accept ki reject garni = hari
+
+sita le book garyo vehicle - mustang

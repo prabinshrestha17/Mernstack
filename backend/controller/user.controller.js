@@ -194,3 +194,27 @@ export const resetPassword = async (req, res) => {
     });
   }
 };
+
+export const updateUser = async (req, res) => {
+  try {
+    const data = req.body;
+
+    delete data.password;
+
+    const id = req.userId;
+
+    console.log(id);
+
+    const result = await User.findByIdAndUpdate(id, data, { new: true });
+
+    res.status(200).json({
+      message: "User updated successfully",
+      data: result,
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal Server Err",
+      error: error.message,
+    });
+  }
+};

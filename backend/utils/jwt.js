@@ -2,7 +2,6 @@ import jwt from "jsonwebtoken";
 import { SECRET_KEY } from "../config/env.js";
 
 export const generateToken = async ({ payload, expiryTime }) => {
-  console.log(payload, expiryTime);
   const result = await jwt.sign(payload, SECRET_KEY, { expiresIn: expiryTime });
   return result;
 };

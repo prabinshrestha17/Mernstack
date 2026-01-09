@@ -52,11 +52,19 @@
 //    console.log(`2 x ${value}  = ${table}`)
 // })
 
-// const array = ["Ram", "Hari", "Binad", "Jimmy"]
+// const array = ["Ram", "Hari", "Binod", "Jimmy"];
 
 // const test = array.filter((value, index)=>{
 // //filter methods checks and filter each data and return the value after filtering from array
-//   const logic = value.includes("a")
+// const logic = array.includes("a");
 //   return logic //the return logic will return the value to test after the data is filtered with the logic
 // })
-//  console.log(test)
+//  console.log(test)\
+
+// Institution
+const role = ["admin", "user", "hr"];
+
+const loggedInUserRole = "admin";
+const accessedUser = role.includes(loggedInUserRole);
+
+console.log(accessedUser);
