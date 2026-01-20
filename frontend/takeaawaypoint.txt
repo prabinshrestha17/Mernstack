@@ -23,3 +23,14 @@ command to set up the frontend project:
 
 return 
 
+day2, 
+Components:
+first letter of the file name always should be in capital
+e.g. Home.jsx
+
+
+
+
+
+
+
