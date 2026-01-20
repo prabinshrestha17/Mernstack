@@ -1,0 +1,25 @@
+day 1, 
+command to set up the frontend project:
+  -> npm create vite@latest 
+  -> project name = frontend
+  -> framework choose = react 
+  -> varient = javascript 
+  done. 
+    cd frontend
+    npm install
+    npm run dev
+
+
+
+    index.css = clear 
+    App.css = clear 
+    App.jsx = clear 
+      rafce   r= react
+              a = Arrow 
+              f= function 
+              c= componential 
+              e = export 
+
+
+return 
+
