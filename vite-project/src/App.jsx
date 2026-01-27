@@ -3,8 +3,8 @@ import About from "./components/About";
 import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
-  const a = "Hello world";
-  console.log(a);
+  // const a = "Hello world";
+  // console.log(a);
 
   return (
     <div>

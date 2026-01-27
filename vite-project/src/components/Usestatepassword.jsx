@@ -1,23 +1,20 @@
 import React, { useState } from "react";
 
 const Usestatepassword = () => {
-  const [value, setValue] = useState("password");
-
-  //input types in html
-  //1. text, password, email, number, date, checkbox, radio
+  const [password, setPassword] = useState("password");
   return (
     <div>
-      <input type={value} />
+      <input type={password} />
       <button
         onClick={() => {
-          setValue("text");
+          setPassword("text");
         }}
       >
         Show
       </button>
       <button
         onClick={() => {
-          setValue("password");
+          setPassword("password");
         }}
       >
         Hide

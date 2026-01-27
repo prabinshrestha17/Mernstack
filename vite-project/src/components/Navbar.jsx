@@ -14,6 +14,7 @@ const Navbar = () => {
         <NavLink to={"/usestate"}>UseState</NavLink>
         <NavLink to={"/image"}>Image State</NavLink>
         <NavLink to={"/password"}>Password State</NavLink>
+        <NavLink to={"/useeffect"}>Use effect</NavLink>
       </div>
     </div>
   );
