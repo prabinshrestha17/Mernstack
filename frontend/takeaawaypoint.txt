@@ -31,6 +31,13 @@ e.g. Home.jsx
 
 
 
+storage in frontend
 
+1. localStorage = store the data permanently and we can access this data in different browser tab.
+
+2. sessionStorage = stores the data temporalely, where we can access this data only in one tab, if we switch to the another tab of the browser, we  cannot access this data.
+
+
+nested routing 
 
 

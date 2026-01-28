@@ -1,0 +1,21 @@
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 20px 50px
+
+}
+
+body{
+
+  margin: 0;
+  padding: 0;
+}

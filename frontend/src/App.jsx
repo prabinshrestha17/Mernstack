@@ -1,12 +1,12 @@
-//r = react
-//a = arrow
-// f = function
-//c = component
-//e = export
 import React from "react";
+import MainRoutes from "./routes/MainRoutes";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <div>
+      <MainRoutes />
+    </div>
+  );
 };
 
 export default App;

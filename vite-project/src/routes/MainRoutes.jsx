@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Outlet, Route, Routes } from "react-router-dom";
 import About from "../components/About";
 import Courses from "../components/Courses";
 import DynamicRoute from "../components/DynamicRoute";
@@ -9,6 +9,8 @@ import UsestatePractice2 from "../components/UsestatePractice2";
 import Usestatepassword from "../components/Usestatepassword";
 import NotfoundPage from "../components/NotfoundPage";
 import UseEffectPractice from "../components/UseEffectPractice";
+import About2 from "../components/About2";
+import About3 from "../components/About3";
 
 const MainRoutes = () => {
   return (
@@ -16,10 +18,6 @@ const MainRoutes = () => {
       <Navbar></Navbar>
       <Routes>
         <Route path="/" element={<div>Hello from home routes</div>}></Route>
-        <Route
-          path="/about"
-          element={<About productName="Lenovo " price="90,000"></About>}
-        ></Route>
         <Route path="/courses" element={<Courses></Courses>}></Route>
         <Route
           path="/usestate"
@@ -28,9 +26,14 @@ const MainRoutes = () => {
 
         <Route path="/image" element={<UsestatePractice2 />}></Route>
         <Route path="/password" element={<Usestatepassword />}></Route>
-        {/* <Route path="/test/:id" element={<Test />}></Route> */}
-        <Route path="*" element={<NotfoundPage />}></Route>
         <Route path="useeffect" element={<UseEffectPractice />}></Route>
+
+        <Route path="/about" element={<Outlet />}>
+          <Route index element={<About></About>}></Route>
+          <Route path="about2" element={<About2 />}></Route>
+          <Route path="about3" element={<About3 />}></Route>
+        </Route>
+        <Route path="*" element={<NotfoundPage />}></Route>
       </Routes>
     </div>
   );
