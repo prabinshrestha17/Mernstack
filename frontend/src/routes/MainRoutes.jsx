@@ -5,6 +5,8 @@ import About from "../components/About";
 import Shop from "../components/Shop";
 import Navbar from "../components/Navbar";
 import Register from "../components/Register";
+import Login from "../components/Login";
+import Dashboard from "../components/Dashboard";
 
 const MainRoutes = () => {
   return (
@@ -16,6 +18,8 @@ const MainRoutes = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/register" element={<Register />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/dashboard" element={<Dashboard />}></Route>
         </Route>
       </Routes>
     </div>

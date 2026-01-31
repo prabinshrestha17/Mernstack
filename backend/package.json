@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ecommerce": "nodemon index.js"
+    "ecommerce": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
