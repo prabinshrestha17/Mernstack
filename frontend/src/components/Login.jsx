@@ -20,14 +20,8 @@ const Login = () => {
       const token = response.data.token;
       console.log(token);
 
-      const isToken = localStorage.setItem("token", token);
-      alert("Login successful...");
-
-      if (isToken) {
-        navigate("/dashboard");
-      } else {
-        Error("failed to login");
-      }
+      localStorage.setItem("token", token);
+      navigate("/dashboard");
     } catch (error) {
       console.log(error.message);
     }
@@ -56,6 +50,7 @@ const Login = () => {
         <br />
         <br />
         <button type="submit">Login</button>
+        <a href="/forgot-password">Forgot Password</a>
       </form>
     </div>
   );

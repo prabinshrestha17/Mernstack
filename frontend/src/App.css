@@ -25,3 +25,18 @@ body{
   align-items: center;
   justify-content: center;
 }
+
+
+.forgot{
+  display: flex ;
+  flex-direction: column;
+  gap: 10px;
+}
+.forgot button{
+  height: 30px;
+  width: 200px;
+}
+
+.forgot input{
+  width: 300px;
+}

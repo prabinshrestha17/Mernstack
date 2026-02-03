@@ -7,6 +7,8 @@ import Navbar from "../components/Navbar";
 import Register from "../components/Register";
 import Login from "../components/Login";
 import Dashboard from "../components/Dashboard";
+import ForgotPassword from "../components/ForgotPassword";
+import ResetPassword from "../components/ResetPassword";
 
 const MainRoutes = () => {
   return (
@@ -19,6 +21,12 @@ const MainRoutes = () => {
           <Route path="/shop" element={<Shop />}></Route>
           <Route path="/register" element={<Register />}></Route>
           <Route path="/login" element={<Login />}></Route>
+          <Route path="/forgot-password" element={<ForgotPassword />}></Route>
+          <Route
+            path="/user/reset-password"
+            element={<ResetPassword />}
+          ></Route>
+
           <Route path="/dashboard" element={<Dashboard />}></Route>
         </Route>
       </Routes>

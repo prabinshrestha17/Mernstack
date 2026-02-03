@@ -144,8 +144,8 @@ export const forgotPassword = async (req, res) => {
     const result = await sendMail({
       email: email,
       subject: "Password reset link",
-      html: `<p>You requested for a password reset</p> </br> <a href=http://localhost:8080/user/reset-password?token=${token}>
-      http://localhost:8080/user/reset-password?token=${token}</a>`,
+      html: `<p>You requested for a password reset</p> </br> <a href=http://localhost:5173/user/reset-password?token=${token}>
+      http://localhost:5173/user/reset-password?token=${token}</a>`,
     });
 
     res.status(200).json({
