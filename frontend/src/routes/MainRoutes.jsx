@@ -9,6 +9,7 @@ import Login from "../components/Login";
 import Dashboard from "../components/Dashboard";
 import ForgotPassword from "../components/ForgotPassword";
 import ResetPassword from "../components/ResetPassword";
+import UpdateProfile from "../components/UpdateProfile";
 
 const MainRoutes = () => {
   return (
@@ -27,7 +28,11 @@ const MainRoutes = () => {
             element={<ResetPassword />}
           ></Route>
 
-          <Route path="/dashboard" element={<Dashboard />}></Route>
+          <Route path="/dashboard" element={<Outlet />}>
+            <Route index element={<Dashboard />}></Route>
+
+            <Route path="update-profile" element={<UpdateProfile />}></Route>
+          </Route>
         </Route>
       </Routes>
     </div>

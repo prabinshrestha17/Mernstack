@@ -13,7 +13,18 @@ const Dashboard = () => {
     }
   }, [navigate]);
 
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      Dashboard
+      <button
+        onClick={() => {
+          navigate("/dashboard/update-profile");
+        }}
+      >
+        Update Profile
+      </button>
+    </div>
+  );
 };
 
 export default Dashboard;
