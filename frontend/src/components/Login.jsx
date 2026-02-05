@@ -29,6 +29,8 @@ const Login = () => {
   return (
     <div className="header">
       <form onSubmit={handleLogin}>
+        <label htmlFor="email">Email</label>
+        <br />
         <input
           type="email"
           value={email}
@@ -38,6 +40,9 @@ const Login = () => {
           }}
         />
         <br />
+        <br />
+
+        <label htmlFor="password">Password</label>
         <br />
         <input
           type="password"
@@ -49,8 +54,10 @@ const Login = () => {
         />
         <br />
         <br />
-        <button type="submit">Login</button>
-        <a href="/forgot-password">Forgot Password</a>
+        <div className="inputfields">
+          <button type="submit">Login</button>
+          <a href="/forgot-password">Forgot Password</a>
+        </div>
       </form>
     </div>
   );

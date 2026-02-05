@@ -4,14 +4,17 @@ import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const token = localStorage.getItem("token");
-    console.log("Dashboard token:", token);
+ useEffect(() => {
+   const token = localStorage.getItem("token");
 
-    if (!token) {
-      navigate("/login", { replace: true });
-    }
-  }, [navigate]);
+   try {
+     if (!token) {
+       navigate("/login");
+     }
+   } catch (error) {
+     console.log(error.message);
+   }
+ }, [navigate]);
 
   return (
     <div>

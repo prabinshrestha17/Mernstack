@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Usestatepractie from "../components/Usestatepractie";
 import Usestate2 from "../components/Usestate2";
+import "../../src/App.css";
 
 const MainRoutes = () => {
   return (
