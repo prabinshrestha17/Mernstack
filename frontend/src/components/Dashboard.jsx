@@ -17,7 +17,7 @@ const Dashboard = () => {
  }, [navigate]);
 
   return (
-    <div>
+    <div className="buttons">
       Dashboard
       <button
         onClick={() => {
@@ -25,6 +25,13 @@ const Dashboard = () => {
         }}
       >
         Update Profile
+      </button>
+      <button
+        onClick={() => {
+          navigate("/dashboard/create-product");
+        }}
+      >
+        Create Product
       </button>
     </div>
   );

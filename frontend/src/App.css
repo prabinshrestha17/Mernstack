@@ -58,7 +58,7 @@ input{
 
 input[type="text"], input[type="email"], input[type="password"]{
   padding: 8px 12px;
-  border-radius: 20px;
+  border-radius: 5px;
   border: 1px solid #ccc;
   outline: none;
 }
@@ -98,4 +98,11 @@ button{
 button:hover{
   background-color: #0056b3;
   transition: 0.3s ease-in-out;
+}
+
+
+.buttons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }

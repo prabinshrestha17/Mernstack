@@ -26,7 +26,7 @@ const Navbar = () => {
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/about"}>About us</NavLink>
         <NavLink to={"/products"}>Products</NavLink>
-        <NavLink to={"/shop"}>Shop</NavLink>
+        <NavLink to={"/store"}>Store</NavLink>
 
         {token ? (
           <>
