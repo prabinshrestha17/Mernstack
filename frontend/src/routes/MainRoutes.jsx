@@ -1,16 +1,19 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-import About from "../components/About";
-import Dashboard from "../components/Dashboard";
-import ForgotPassword from "../components/ForgotPassword";
-import Home from "../components/Home";
-import Login from "../components/Login";
-import Navbar from "../components/Navbar";
+import About from "../components/users/About";
+import Dashboard from "../components/dashboard/Dashboard";
+import ForgotPassword from "../components/auth/ForgotPassword";
+import Home from "../components/users/Home";
+import Login from "../components/auth/Login";
+import Navbar from "../components/users/Navbar";
 import ProductCreate from "../components/ProductCreate";
-import Register from "../components/Register";
-import ResetPassword from "../components/ResetPassword";
+import Register from "../components/auth/Register";
+import ResetPassword from "../components/auth/ResetPassword";
 import UpdateProfile from "../components/UpdateProfile";
-import Store from "../components/Store";
-import Order from "../components/Order";
+import Store from "../components/users/Store";
+import Order from "../components/users/Order";
+import Products from "../components/users/Products";
+import MyProducts from "../components/dashboard/MyProducts";
+import UpdateProduct from "../components/UpdateProduct";
 
 const MainRoutes = () => {
   return (
@@ -20,7 +23,7 @@ const MainRoutes = () => {
         <Route path="/" element={<Outlet />}>
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/products" element={<ProductCreate />}></Route>
+          <Route path="/products" element={<Products />}></Route>
           <Route path="/store" element={<Store />}></Route>
           <Route path="/order/:id/:price" element={<Order />}></Route>
 
@@ -37,6 +40,11 @@ const MainRoutes = () => {
 
             <Route path="update-profile" element={<UpdateProfile />}></Route>
             <Route path="create-product" element={<ProductCreate />}></Route>
+            <Route path="my-products" element={<MyProducts />}></Route>
+            <Route
+              path="update-product/:id"
+              element={<UpdateProduct />}
+            ></Route>
           </Route>
         </Route>
       </Routes>
