@@ -55,8 +55,8 @@ export const updateProductController = async (req, res) => {
     //let quantity = data.quantity
     const result = await Product.findByIdAndUpdate(
       id,
-      { quantity: quantity },
-      { new: true }
+      { ...data },
+      { new: true },
     );
     res.status(200).json({
       message: "Product Updated Successfully",

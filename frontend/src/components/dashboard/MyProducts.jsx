@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "../App.css";
-
+import "../../App.css";
 const MyProducts = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -26,12 +25,28 @@ const MyProducts = () => {
     navigate(`/dashboard/update-product/${productId}`);
   };
 
+  const handleDelete = async productId => {
+    console.log(productId);
+    try {
+      const response = await axios.delete(
+        `http://localhost:8080/product/delete/${productId}`,
+      );
+      alert("Product deleted successfully!");
+      setProducts(prevProducts =>
+        prevProducts.filter(product => product._id !== productId),
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="store-container">
       <h1 className="page-title">Our Collection</h1>
 
       {products.length === 0 ? (
-        <p className="loading-text">Loading products...</p>
+        <p className="loading-text">No products</p>
       ) : (
         <div className="product-grid">
           {products.map((value, index) => (
@@ -45,12 +60,13 @@ const MyProducts = () => {
               </div>
               <div className="product-content">
                 <h3 className="product-name">{value.productName}</h3>
+                <p>In Stock: {value.quantity} pcs. </p>
                 <p className="product-details">{value.productDetails}</p>
                 <div className="price-action-row">
                   <p className="product-price">Rs. {value.price}</p>
                   <button
                     className="delete-button"
-                    onClick={() => handleClick(value._id, value.price)}
+                    onClick={() => handleDelete(value._id)}
                   >
                     Delete
                   </button>

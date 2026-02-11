@@ -4,7 +4,7 @@ import { useDropzone } from "react-dropzone";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import "../App.css";
+import "../../App.css";
 
 const ProductCreate = () => {
   const [productName, setProductName] = useState("");

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Store from "../users/Store";
-import "../App.css";
+import "../../App.css";
 
 const Dashboard = () => {
   const navigate = useNavigate();

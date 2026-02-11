@@ -5,15 +5,15 @@ import ForgotPassword from "../components/auth/ForgotPassword";
 import Home from "../components/users/Home";
 import Login from "../components/auth/Login";
 import Navbar from "../components/users/Navbar";
-import ProductCreate from "../components/ProductCreate";
+import ProductCreate from "../components/dashboard/ProductCreate";
 import Register from "../components/auth/Register";
 import ResetPassword from "../components/auth/ResetPassword";
-import UpdateProfile from "../components/UpdateProfile";
+import UpdateProfile from "../components/dashboard/UpdateProfile";
 import Store from "../components/users/Store";
 import Order from "../components/users/Order";
 import Products from "../components/users/Products";
 import MyProducts from "../components/dashboard/MyProducts";
-import UpdateProduct from "../components/UpdateProduct";
+import UpdateProduct from "../components/dashboard/UpdateProduct";
 
 const MainRoutes = () => {
   return (

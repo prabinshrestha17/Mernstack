@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import "../../src/App.css";
+import "../../App.css";
 
 const Navbar = () => {
   const [logedOut, setLogedOut] = useState(false);
