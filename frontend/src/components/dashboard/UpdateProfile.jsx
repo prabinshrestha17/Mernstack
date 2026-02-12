@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import baseUrl from "../../config/env";
 
 const UpdateProfile = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +16,7 @@ const UpdateProfile = () => {
 
     try {
       const response = await axios.patch(
-        "http://localhost:8080/user/update-user",
+        `${baseUrl}/user/update-user`,
         {
           email: email,
           username: userName,

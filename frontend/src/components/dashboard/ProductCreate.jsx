@@ -5,6 +5,7 @@ import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import "../../App.css";
+import baseUrl from "../../config/env";
 
 const ProductCreate = () => {
   const [productName, setProductName] = useState("");
@@ -42,7 +43,7 @@ const ProductCreate = () => {
       formData.append("file", productImage);
 
       const uploadResponse = await axios.post(
-        "http://localhost:8080/file/upload",
+        `${baseUrl}/file/upload`,
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },

@@ -5,6 +5,7 @@ import { useDropzone } from "react-dropzone";
 import { Bounce, ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../../App.css";
+import baseUrl from "../../config/env";
 
 const UpdateProduct = () => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const UpdateProduct = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:8080/product/get/${id}`);
+        const res = await axios.get(`${baseUrl}/product/get/${id}`);
         const data = res.data.data;
         console.log(data);
         if (data) {
@@ -75,16 +76,14 @@ const UpdateProduct = () => {
       if (productImage) {
         const formData = new FormData();
         formData.append("file", productImage);
-        const uploadRes = await axios.post(
-          "http://localhost:8080/file/upload",
-          formData,
-          { headers: { "Content-Type": "multipart/form-data" } },
-        );
+        const uploadRes = await axios.post(`${baseUrl}/file/upload`, formData, {
+          headers: { "Content-Type": "multipart/form-data" },
+        });
         imageUrl = uploadRes.data.url;
       }
 
       const updatedData = await axios.patch(
-        `http://localhost:8080/product/update/${id}`,
+        `${baseUrl}/product/update/${id}`,
         {
           ...product,
           productImage: imageUrl,

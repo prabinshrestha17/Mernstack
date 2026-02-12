@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../App.css";
+import baseUrl from "../../config/env";
 const MyProducts = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
@@ -9,9 +10,7 @@ const MyProducts = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/product/getAll",
-        );
+        const response = await axios.get(`${baseUrl}/product/getAll`);
 
         setProducts(response.data.date || []);
       } catch (error) {
@@ -29,7 +28,7 @@ const MyProducts = () => {
     console.log(productId);
     try {
       const response = await axios.delete(
-        `http://localhost:8080/product/delete/${productId}`,
+        `${baseUrl}/product/delete/${productId}`,
       );
       alert("Product deleted successfully!");
       setProducts(prevProducts =>

@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../../App.css";
+import baseUrl from "../../config/env";
 
 const Order = () => {
   const { id, price } = useParams();
@@ -21,7 +22,7 @@ const Order = () => {
   const createOrder = async e => {
     e.preventDefault();
     try {
-      const orderData = await axios.post("http://localhost:8080/order/create", {
+      const orderData = await axios.post(`${baseUrl}/order/create`, {
         productId: id,
         quantity: quantity,
         totalPrice: actualPrice,

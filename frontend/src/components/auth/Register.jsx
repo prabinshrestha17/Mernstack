@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
 import "../../App.css";
+import baseUrl from "../../config/env";
 
 const Register = () => {
   const [username, setUsername] = useState("");
@@ -12,7 +13,7 @@ const Register = () => {
   const handleSubmit = async e => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/user/register", {
+      const response = await axios.post(`${baseUrl}/user/register`, {
         username: username,
         email: email,
         password: password,

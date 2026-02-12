@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import baseUrl from "../../config/env";
 
 const ResetPassword = () => {
   const [password, setPassword] = useState("");
@@ -15,14 +16,14 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.patch(
-        `http://localhost:8080/user/reset-password?token=${token}`,
+        `${baseUrl}/user/reset-password?token=${token}`,
         {
           password: password,
         },
       );
 
       console.log(response);
-      alert("Password reset succesfully.");
+      alert("Password reset successfully.");
       navigate("/login");
     } catch (error) {
       console.log(error.message);

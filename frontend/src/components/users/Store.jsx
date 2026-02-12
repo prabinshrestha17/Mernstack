@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../App.css";
+import baseUrl from "../../config/env";
 
 const Store = () => {
   const [products, setProducts] = useState([]);
@@ -10,11 +11,8 @@ const Store = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:8080/product/getAll",
-        );
-        // Kept your original data path (response.data.date)
-        // Added optional chaining and fallback to empty array for safety
+        const response = await axios.get(`${baseUrl}/product/getAll`);
+
         setProducts(response.data.date || []);
       } catch (error) {
         console.log(error.message);
