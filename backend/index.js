@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import { connectDB } from "./config/connectMongo.js";
 import { productRouter } from "./routes/product.route.js";
 import { orderRouter } from "./routes/order.route.js";
 import { userRouter } from "./routes/user.route.js";
@@ -8,6 +7,7 @@ import { fileRouter } from "./routes/file.route.js";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { connectDB } from "./config/connectMongo.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,10 +21,9 @@ if (!fs.existsSync(uploadDir)) {
 
 const app = express();
 
-// CORS configuration - MUST be before routes
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: "http://localhost:5173",
     credentials: true,
   }),
 );
