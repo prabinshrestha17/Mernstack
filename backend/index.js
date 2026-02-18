@@ -8,6 +8,7 @@ import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
 import { connectDB } from "./config/connectMongo.js";
+import { FRONTEND_URL } from "./config/env.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,7 +24,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin:
+      FRONTEND_URL ||
+      "https://mernstack-w1ne.vercel.app" ||
+      "http://localhost:5173",
     credentials: true,
   }),
 );
