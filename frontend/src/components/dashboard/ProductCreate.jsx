@@ -51,6 +51,7 @@ const ProductCreate = () => {
       );
 
       const imageUrl = uploadResponse.data.url;
+      console.log(imageUrl);
 
       const response = await axios.post(
         `${baseUrl}/product/create`,

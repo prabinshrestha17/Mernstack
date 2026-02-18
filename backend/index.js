@@ -22,11 +22,14 @@ if (!fs.existsSync(uploadDir)) {
 
 const app = express();
 
+
+console.log(FRONTEND_URL);
+
 app.use(
   cors({
     origin:
-      FRONTEND_URL ||
       "https://mernstack-w1ne.vercel.app" ||
+      FRONTEND_URL ||
       "http://localhost:5173",
     credentials: true,
   }),
