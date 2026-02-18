@@ -53,7 +53,7 @@ const ProductCreate = () => {
       const imageUrl = uploadResponse.data.url;
 
       const response = await axios.post(
-        "http://localhost:8080/product/create",
+        `${baseUrl}/product/create`,
         {
           productName,
           price,
